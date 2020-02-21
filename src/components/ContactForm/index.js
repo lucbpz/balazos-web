@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import axios from "axios"
 import SectionTitle from "../SectionTitle"
 
 const ContactForm = props => {
@@ -19,41 +20,32 @@ const ContactForm = props => {
     })
   }
 
-  const sendEmail = () => {
-    fetch(`https://formspree.io/hola@balazosdirecto.com`, {
-      method: "post",
-      body: JSON.stringify({
+  const sendEmail = async e => {
+    e.preventDefault()
+    try {
+      await axios.post("https://formspree.io/xyyjyanq", {
         name: state.name,
         email: state.email,
         subject: state.subject,
         message: state.message,
-      }),
-    })
-      .then(response => {
-        if (response.ok) {
-          return response.json()
-        } else {
-          sendEmailWithMailTo(state.subject, state.message)
-        }
       })
-      .then(data => {
-        console.log(data)
-        setState({ showThanks: true })
+      setState({
+        showThanks: true,
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
       })
-      .catch(() => {
-        sendEmailWithMailTo(state.subject, state.message)
-      })
+    } catch (err) {
+      console.log(err)
+      sendEmailWithMailTo(state.subject, state.message)
+    }
   }
 
   const sendEmailWithMailTo = (subject, message) => {
     var mail = document.createElement("a")
     mail.href = `mailto:hola@balazosdirecto.com?subject=${subject}&body=${message}`
     mail.click()
-  }
-
-  const handleSubmit = evt => {
-    sendEmail()
-    evt.preventDefault()
   }
 
   return (
@@ -69,7 +61,9 @@ const ContactForm = props => {
               <form
                 id="contact_form"
                 className={"dark"}
-                onSubmit={handleSubmit}
+                method="POST"
+                action="https://formspree.io/hola@balazosdirecto.com"
+                onSubmit={sendEmail}
               >
                 <div className={"large-12 columns"}>
                   {state.showThanks ? (
