@@ -1,5 +1,5 @@
 ---
-date: 2020-02-23T21:58:37.491Z
+order: 1
 name: Fran Escalante
 avatar: /img/fran.jpg
 position: Vocalista
