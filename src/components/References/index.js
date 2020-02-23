@@ -25,8 +25,7 @@ const References = props => {
     <div
       className={"full no-overflow no-padding parallax"}
       style={{
-        backgroundImage:
-          "url(https://gitlab.com/lucbpz/balazos-web/-/raw/master/assets/images/@stock/balazos-bodeguita.png)",
+        backgroundImage: "url(/balazos-bodeguita.jpg)",
       }}
     >
       <div className={"left-half"}>

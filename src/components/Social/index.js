@@ -5,8 +5,7 @@ const Social = props => {
     <div
       className={"full parallax social-networks"}
       style={{
-        backgroundImage:
-          "url(https://gitlab.com/lucbpz/balazos-web/-/raw/master/assets/images/@stock/balazos-fabrica-2.jpg)",
+        backgroundImage: "url(/balazos-fabrica-2.jpg)",
       }}
     >
       <div className={"two spacing"}></div>

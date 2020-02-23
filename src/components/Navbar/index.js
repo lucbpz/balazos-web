@@ -19,7 +19,7 @@ export default () => (
               width="126"
               height="48"
               alt=""
-              src="https://gitlab.com/lucbpz/balazos-web/-/raw/master/assets/images/balazos-logo.png"
+              src={"/balazos-logo.png"}
             />
           </h1>
         </li>

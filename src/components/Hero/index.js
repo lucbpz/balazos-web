@@ -3,11 +3,8 @@ import React from "react"
 export default () => (
   <div className={"full no-padding parallax home-video-wrapper"}>
     <div className={"fullscreen"}>
-      <video autoPlay="autoplay" id="fullscreen-video" loop="loop">
-        <source
-          src="https://gitlab.com/lucbpz/balazos-web/-/raw/master/assets/images/@stock/cover-video.optimized.mp4"
-          type="video/mp4"
-        />
+      <video autoPlay="autoplay" id="fullscreen-video" loop="loop" muted>
+        <source src={"/hero.mp4"} type="video/mp4" />
         <track
           default
           kind="captions"
