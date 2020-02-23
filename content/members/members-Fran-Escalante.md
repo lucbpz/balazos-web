@@ -9,9 +9,6 @@ description: >-
   coplas de Carnaval y a llevar su chirigota por los mejores concursos de
   Andalucía.
 socials:
-  - '[{ link: "http://facebook.com"'
-  - 'icon: "facebook" }'
-  - '{ link: "http://instagram.com"'
-  - 'icon: "instagram" }]'
+  - "https://www.facebook.com/fran.escaso"
+  - "https://www.instagram.com/franbalazos"
 ---
-
