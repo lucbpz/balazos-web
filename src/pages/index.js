@@ -11,12 +11,14 @@ import References from "../components/References"
 import ContactForm from "../components/ContactForm"
 import Social from "../components/Social"
 import Footer from "../components/Footer"
+import SEO from "../components/SEO"
 
 const Home = ({
   data: { allInstaNode, rawMembers, rawServices, rawReferences },
 }) => (
   <div className={"f-topbar-fixed"}>
     {/* <Navbar /> */}
+    <SEO />
     <div id="main" className={"top-shift"}>
       <Hero />
       <Services id="services" services={mapNodes(rawServices)} />

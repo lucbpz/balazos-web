@@ -8,7 +8,17 @@ require("dotenv").config({
 })
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: "Balazos. Tu música.",
+    titleTemplate: "Un punto de contacto para toda tu música para tu boda.",
+    image: "./balazos-logo.png",
+    description:
+      "Somos Balazos. Un grupo de música. Una orquesta para tu evento. Tocamos en tu boda, feria o evento. Versiones de los años 80. Disfruta de la música y diviértete con nosotros!",
+    url: "http://www.balazosdirecto.com", // No trailing slash allowed!
+    twitterUsername: "@balazosdirecto",
+    instagramUsername: "@balazosdirecto",
+    facebookUsername: "balazosdirecto",
+  },
   plugins: [
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-sass`,
@@ -16,6 +26,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-instagram`,
       options: {
