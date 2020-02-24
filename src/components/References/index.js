@@ -2,14 +2,13 @@ import React from "react"
 // import { Carousel, Image } from "grommet"
 import RefCarousel from "./RefCarousel"
 import "./styles.css"
+import StyledBackgroundSection from "../BackgroundSection"
 
 const References = props => {
   return (
-    <div
+    <StyledBackgroundSection
+      src={"balazos-bodeguita.jpg"}
       className={"full no-overflow no-padding parallax"}
-      style={{
-        backgroundImage: "url(/balazos-bodeguita.jpg)",
-      }}
     >
       <div
         style={{ width: "100vw" }}
@@ -27,7 +26,7 @@ const References = props => {
           />
         </div>
       </div>
-    </div>
+    </StyledBackgroundSection>
   )
 }
 

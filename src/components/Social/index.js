@@ -6,15 +6,15 @@ import {
   faTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons"
+import StyledBackgroundSection from "../BackgroundSection"
+
 import "./styles.css"
 
 const Social = props => {
   return (
-    <div
+    <StyledBackgroundSection
       className={"full parallax social-networks"}
-      style={{
-        backgroundImage: "url(/balazos-fabrica-2.jpg)",
-      }}
+      src={"balazos-fabrica-2.jpg"}
     >
       <div className={"two spacing"}></div>
       <div className={"row"}>
@@ -60,7 +60,7 @@ const Social = props => {
         </div>
       </div>
       <div className={"two spacing"}></div>
-    </div>
+    </StyledBackgroundSection>
   )
 }
 
