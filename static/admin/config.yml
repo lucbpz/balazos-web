@@ -1,6 +1,9 @@
 backend:
   name: github
   repo: lucbpz/balazos-web
+  branch: master
+  base_url: https://us-central1-balazosdirecto.cloudfunctions.net
+  auth_endpoint: /oauth/auth
 
 media_folder: static/img
 public_folder: /img
