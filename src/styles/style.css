@@ -4159,7 +4159,7 @@ body {
   margin-left: 73px;
 }
 .modIconText .icon-text-advanced {
-  padding: 80px 100px;
+  padding: 10% 10%;
   color: #999;
   text-align: center;
   background: none;
@@ -5993,7 +5993,7 @@ body {
   }
 
   .intro p {
-    padding: 0 30px 0;
+    padding: 0;
   }
 
   .modSectionHeader.circle {
@@ -6028,8 +6028,9 @@ body {
   }
 
   .fullscreen .layer {
-    top: 25%;
-    padding: 20px;
+    top: 20%;
+    padding: 0px;
+    width: 90%;
   }
   .fullscreen .layer h1 {
     font-size: 40px;

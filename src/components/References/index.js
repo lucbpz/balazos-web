@@ -1,6 +1,7 @@
 import React from "react"
 // import { Carousel, Image } from "grommet"
 import RefCarousel from "./RefCarousel"
+import "./styles.css"
 
 const References = props => {
   return (
@@ -10,7 +11,10 @@ const References = props => {
         backgroundImage: "url(/balazos-bodeguita.jpg)",
       }}
     >
-      <div style={{ width: "100vw", height: "530px" }} className={"left-half"}>
+      <div
+        style={{ width: "100vw" }}
+        className={"left-half references-text-container"}
+      >
         <div className={"two spacing"}></div>
         <div className={"row"}>
           <div className={"section-header alt white"}>
