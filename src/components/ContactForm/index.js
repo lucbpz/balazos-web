@@ -49,7 +49,7 @@ const ContactForm = props => {
   }
 
   return (
-    <div className={"full dark"}>
+    <div style={{ paddingTop: "0px" }} className={"full dark"}>
       <div className={"row"}>
         <div className={"large-8 columns large-centered"}>
           <SectionTitle title="Solicita información" smallTitle="CONTACTO" />

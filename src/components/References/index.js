@@ -10,7 +10,7 @@ const References = props => {
         backgroundImage: "url(/balazos-bodeguita.jpg)",
       }}
     >
-      <div className={"left-half"}>
+      <div style={{ width: "100vw", height: "530px" }} className={"left-half"}>
         <div className={"two spacing"}></div>
         <div className={"row"}>
           <div className={"section-header alt white"}>

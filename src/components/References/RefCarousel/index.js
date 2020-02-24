@@ -1,5 +1,6 @@
 import React from "react"
 import { Grommet, Box, Carousel } from "grommet"
+import Description from "../../Description"
 
 const RefCarousel = ({ initialChild, references, ...props }) => {
   return (
@@ -8,12 +9,8 @@ const RefCarousel = ({ initialChild, references, ...props }) => {
         <Carousel initialChild={initialChild} {...props}>
           {references.map(reference => (
             <Box key={reference.order}>
-              {/* <div
-                className={"item slick-slide slick-cloned"}
-                data-slick-index="-1"
-                style={{ width: "289px" }}
-              > */}
-              <p className={"quote"}>{reference.description}</p>
+              {/* <p className={"quote"}>{reference.description}</p> */}
+              <Description text={reference.description} />
               <div className={"two spacing"}></div>
               <div className={"author"}>
                 <p className={"author-avatar"}>
@@ -23,7 +20,6 @@ const RefCarousel = ({ initialChild, references, ...props }) => {
                   <strong>{reference.author}</strong>
                 </p>
               </div>
-              {/* </div> */}
             </Box>
           ))}
         </Carousel>

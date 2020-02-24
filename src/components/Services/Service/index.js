@@ -1,4 +1,5 @@
 import React from "react"
+import Description from "../../Description"
 
 const Service = props => (
   <div
@@ -16,7 +17,7 @@ const Service = props => (
         </div>
       </div>
       <h3>{props.title}</h3>
-      <p>{props.description}</p>
+      <Description primary text={props.description} />
       <div className={"spacing"}></div>
     </div>
   </div>

@@ -1,4 +1,5 @@
 import React from "react"
+import Description from "../../Description"
 
 const getIcon = url => {
   switch (true) {
@@ -14,23 +15,14 @@ const getIcon = url => {
 }
 const Member = props => {
   return (
-    <div style={{ minWidth: "33%", width: "33%" }}>
+    <div style={{ minWidth: "380px", width: "380px" }}>
+      <img style={{ maxHeight: "422px" }} alt={props.name} src={props.avatar} />
       <div className={""}>
-        <div className={"member-avatar"}>
-          <img
-            className={"avatar"}
-            style={{ maxHeight: "422px" }}
-            alt=""
-            src={props.avatar}
-          />
-        </div>
-      </div>
-      <div className={""}>
-        <div className={"member-dec"}>
+        <div className={"member-dec"} style={{ paddingTop: "20px" }}>
           <div className={"intro"}>
             <h3>{props.name}</h3>
             <h4>{props.position}</h4>
-            <p>{props.desc}</p>
+            <Description primary text={props.desc} />
             <ul className={"socials"}>
               {(props.socials || []).map(social => (
                 <li key={social}>

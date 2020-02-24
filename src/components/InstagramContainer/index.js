@@ -4,9 +4,6 @@ import InstagramPosts from "../InstagramPosts"
 import SectionTitle from "../SectionTitle"
 
 const InstagramContainer = ({ title, text, nodes }) => {
-  //   const size = useContext(ResponsiveContext)
-  //   const extraProps =
-  //     size !== `small` ? { style: { gridColumnStart: 2 } } : undefined
   return (
     <Box>
       <SectionTitle

@@ -1,4 +1,5 @@
 import React from "react"
+import SmallTitle from "../SmallTitle"
 
 const SectionTitle = props => {
   return (
@@ -6,7 +7,7 @@ const SectionTitle = props => {
       <div className={"row"}>
         <div className={"large-8 columns large-centered"}>
           <div className={"section-title"}>
-            <p className={"small-title"}>{props.smallTitle}</p>
+            <SmallTitle text={props.smallTitle} />
             <h2>{props.title}</h2>
           </div>
         </div>
