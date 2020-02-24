@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Hero from "../components/Hero"
 import Services from "../components/Services"
-import Navbar from "../components/Navbar"
+// import Navbar from "../components/Navbar"
 import InstagramContainer from "../components/InstagramContainer"
 import SectionTitle from "../components/SectionTitle"
 import InvertedSectionTitle from "../components/InvertedSectionTitle"
@@ -16,7 +16,7 @@ const Home = ({
   data: { allInstaNode, rawMembers, rawServices, rawReferences },
 }) => (
   <div className={"f-topbar-fixed"}>
-    <Navbar />
+    {/* <Navbar /> */}
     <div id="main" className={"top-shift"}>
       <Hero />
       <Services id="services" services={mapNodes(rawServices)} />
