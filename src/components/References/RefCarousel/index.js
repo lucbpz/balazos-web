@@ -4,10 +4,10 @@ import { Grommet, Box, Carousel } from "grommet"
 const RefCarousel = ({ initialChild, references, ...props }) => {
   return (
     <Grommet>
-      <Box align="center" pad="large">
+      <Box align="center">
         <Carousel initialChild={initialChild} {...props}>
           {references.map(reference => (
-            <Box key={reference.order} pad="xlarge">
+            <Box key={reference.order}>
               {/* <div
                 className={"item slick-slide slick-cloned"}
                 data-slick-index="-1"
@@ -20,7 +20,7 @@ const RefCarousel = ({ initialChild, references, ...props }) => {
                   <img width="80" height="80" alt="" src={reference.avatar} />
                 </p>
                 <p className={"author-name"}>
-                  -<strong>{reference.author}</strong>
+                  <strong>{reference.author}</strong>
                 </p>
               </div>
               {/* </div> */}
