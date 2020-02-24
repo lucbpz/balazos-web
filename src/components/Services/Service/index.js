@@ -12,11 +12,11 @@ const Service = props => (
     >
       <div className={"wrapper"}>
         <div className={"content"}>
-          <i className={props.icon}></i>
+          <img src={props.icon} alt={props.title} />
         </div>
       </div>
       <h3>{props.title}</h3>
-      <p>{props.desc}</p>
+      <p>{props.description}</p>
       <div className={"spacing"}></div>
     </div>
   </div>
