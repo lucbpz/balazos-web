@@ -6,7 +6,9 @@ before_script:
   - npm install
 script:
   - npm run build
-deploy:
-  provider: surge
-  project: ./public/
-  domain: balazosdirecto.surge.sh
+
+after_script:
+  - if [ "$TRAVIS_BRANCH" = "develop" ]; then npm run deploy:dev;
+    fi
+  - if [ "$TRAVIS_BRANCH" = "master" ]; then npm run deploy:prod;
+    fi
