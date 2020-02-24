@@ -1,4 +1,12 @@
 import React from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faFacebook,
+  faInstagram,
+  faTwitter,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons"
+import "./styles.css"
 
 const Social = props => {
   return (
@@ -13,7 +21,7 @@ const Social = props => {
         <div className={"medium-3 columns"}>
           <div className={"big-social"}>
             <a href="http://facebook.com/balazosdirecto">
-              <i className={"fa fa-facebook"}></i>
+              <FontAwesomeIcon className="social-icon" icon={faFacebook} />
             </a>
             <h4>Facebook</h4>
             <p>Síguenos en facebook</p>
@@ -23,7 +31,7 @@ const Social = props => {
         <div className={"medium-3 columns"}>
           <div className={"big-social"}>
             <a href="http://instagram.com/balazosdirecto">
-              <i className={"fa fa-instagram"}></i>
+              <FontAwesomeIcon className="social-icon" icon={faInstagram} />
             </a>
             <h4>Instagram</h4>
             <p>Síguenos en instagram</p>
@@ -33,7 +41,7 @@ const Social = props => {
         <div className={"medium-3 columns"}>
           <div className={"big-social"}>
             <a href="http://twitter.com/balazosdirecto">
-              <i className={"fa fa-twitter"}></i>
+              <FontAwesomeIcon className="social-icon" icon={faTwitter} />
             </a>
             <h4>Twitter</h4>
             <p>Síguenos en twitter</p>
@@ -43,7 +51,7 @@ const Social = props => {
         <div className={"medium-3 columns"}>
           <div className={"big-social"}>
             <a href="https://www.youtube.com/channel/UC3_CxMsHZCWuVUnIEixaIhg">
-              <i className={"fa fa-youtube"}></i>
+              <FontAwesomeIcon className="social-icon" icon={faYoutube} />
             </a>
             <h4>YouTube</h4>
             <p>Mira nuestro canal de youtube</p>

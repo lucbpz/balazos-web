@@ -20,7 +20,7 @@ const InvertedSectionTitle = props => {
           </p>
         </div>
       </div>
-      <div class="two spacing"></div>
+      <div className={"two spacing"}></div>
     </div>
   )
 }

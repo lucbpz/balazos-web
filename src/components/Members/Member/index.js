@@ -1,14 +1,20 @@
 import React from "react"
 import Description from "../../Description"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faFacebook,
+  faInstagram,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons"
 
 const getIcon = url => {
   switch (true) {
     case url.includes("facebook"):
-      return "fa fa-facebook"
+      return faFacebook
     case url.includes("instagram"):
-      return "fa fa-instagram"
+      return faInstagram
     case url.includes("twitter"):
-      return "fa fa-twitter"
+      return faTwitter
     default:
       return undefined
   }
@@ -27,7 +33,7 @@ const Member = props => {
               {(props.socials || []).map(social => (
                 <li key={social}>
                   <a href={social}>
-                    <i className={getIcon(social)}></i>
+                    <FontAwesomeIcon icon={getIcon(social)} />
                   </a>
                 </li>
               ))}
