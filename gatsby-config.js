@@ -15,18 +15,20 @@ module.exports = {
     description:
       "Somos Balazos. Un grupo de música. Una orquesta para tu evento. Tocamos en tu boda, feria o evento. Versiones de los años 80. Disfruta de la música y diviértete con nosotros!",
     url: "http://www.balazosdirecto.com", // No trailing slash allowed!
+    siteUrl: "http://www.balazosdirecto.com", // No trailing slash allowed!
     twitterUsername: "@balazosdirecto",
     instagramUsername: "@balazosdirecto",
     facebookUsername: "balazosdirecto",
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
-    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-instagram`,
       options: {
