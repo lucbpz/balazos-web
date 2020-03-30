@@ -1,97 +1,102 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+  <a href="http://www.balazosdirecto.com">
+    <img alt="Balazos" src="http://balazosdirecto.surge.sh/balazos-logo.png" width="60" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby's hello-world starter
+  Balazos - Grupo de versiones. Sitio web construido con Gatsby
 </h1>
 
-Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+<p align="center">
+  <a href="http://www.balazosdirecto.com">balazosdirecto.com</a>
+</p>
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+<p align="center">
+  <a href="https://travis-ci.org"><img src="https://travis-ci.org/lucbpz/balazos-web.svg?branch=master" /></a>
+</p>
 
-## 🚀 Quick start
+- [🎉 Features](#-features)
+  - [⛵ Lighthouse score](#-lighthouse-score)
+  - [🏆 SEO component](#-seo-component)
+- [✨ Development](#-development)
+- [🚚 Deployment](#-deployment)
+- [🔮 CMS](#-cms)
+- [🏛 Licenses](#-licenses)
 
-1.  **Create a Gatsby site.**
+## 🎉 Features
+Toda la página [web](http://balazosdirecto.com) es una Single Page Application hecha en React y construida por [Gatsby v2](https://www.gatsbyjs.org).
 
-    Use the Gatsby CLI to create a new site, specifying the hello-world starter.
 
-    ```shell
-    # create a new Gatsby site using the hello-world starter
-    gatsby new my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello-world
-    ```
+En un principio contaba con un template comprado en [themeforest](https://themeforest.net/), que ha sido migrado (solo las partes que me interesaban) a componentes de React.
+Para alimentar los datos, se utiliza GraphQL.
 
-1.  **Start developing.**
+### ⛵ Lighthouse score
 
-    Navigate into your new site’s directory and start it up.
+![Lighthouse scores](https://lighthouse.now.sh/?perf=83&a11y=87&bp=85&seo=90)
 
-    ```shell
-    cd my-hello-world-starter/
-    gatsby develop
-    ```
+Cosas a mejorar:
+* Dónde se encuentra alejada la web, ya que es un dominio comprado pero que apunta a otro sitio donde esta web está desplegada de forma gratuita, con lo cual no cuenta con los mejores recursos para renderizarse cuanto antes.
+* El vídeo que se carga nada más entrar.
+* Accesibilidad.
+* Convertir a PWA (¿tiene sentido?)
 
-1.  **Open the source code and start editing!**
+### 🏆 SEO component
 
-    Your site is now running at `http://localhost:8000`!
+Incluye un componente SEO (actualmente sólo para las tags de la página de inicio, ya que es la única ruta), inspirado en el SEO component de [kremalicious](https://github.com/kremalicious/portfolio).
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+## ✨ Development
 
-    Open the `my-hello-world-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+Se puede arrancar perfectamente en local instalando las dependencias
+- [] TODO: Dockerizar.
 
-## 🧐 What's inside?
+```bash
+git clone git@github.com:lucbpz/balazos-web.git
+cd balazos-web/
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+# instalar dependencias y arrancar
+npm i
+gatsby develop
+```
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+## 🚚 Deployment
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+El proyecto está montado en un entorno de CI/CD con Travis y Surge.
+Los deploys se hacen automáticamente.
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+- push a `master` hace un trigger de un despliegue a producción.
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+El comando para hacer deploy no es más que una build de Gatsby, que luego se despliega con Surge.
+```bash
+npm run build
+npm run deploy:dev
+```
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+## 🔮 CMS
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+El CMS elegido es el CMS de Netlify, el cual funciona de forma super sencilla cuando todo está integrado en la plataforma de Netlify.
+Es decir, si alojas la web en Netlify y utilizas NetlifyCMS, no hay ningún problema.
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+El reto ha sido utilizar Netlify CMS pero alojando la web en otro dominio, y haciendo uso del login que permite Netlify a través de GitHub.
+Para ello se ha hecho uso de una Lambda Function en AWS que permite esta integración. Hay varios proyectos que permiten esta integración con AWS.
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+Documentación de Netlify:
+- [oauth-provider-tokens](https://docs.netlify.com/visitor-access/oauth-provider-tokens/#setup-and-settings)
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+Proyectos para integración NetlifyCMS - OAuth con GitHub:
+- [netlify-cms-github-oauth-provider](https://github.com/vencax/netlify-cms-github-oauth-provider)
+- [netlify-serverless-oauth2-backend](https://github.com/marksteele/netlify-serverless-oauth2-backend)
 
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+## 🏛 Licenses
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+**© Copyright 2020 Lucas Bernalte**
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+Todas las imágenes tienen copyright.
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+Puedes hacer un fork, y partir tu proyecto a partir de aquí, siempre y cuando las imágenes y vídeos que se sirven sean diferentes y se cambie el estilo, ya que es un template de pago.
 
-## 🎓 Learning Gatsby
+Para todo lo demás:
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+**The MIT License**
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-hello-world)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+[Full MIT license text](LICENSE)
