@@ -23,12 +23,13 @@ const ContactForm = props => {
   const sendEmail = async e => {
     e.preventDefault()
     try {
-      await axios.post("https://formspree.io/xyyjyanq", {
-        name: state.name,
-        email: state.email,
-        subject: state.subject,
-        message: state.message,
-      })
+      // await axios.post("https://formspree.io/xyyjyanq", {
+      //   name: state.name,
+      //   email: state.email,
+      //   subject: state.subject,
+      //   message: state.message,
+      // })
+      
       setState({
         showThanks: true,
         name: "",
@@ -44,7 +45,7 @@ const ContactForm = props => {
 
   const sendEmailWithMailTo = (subject, message) => {
     var mail = document.createElement("a")
-    mail.href = `mailto:hola@balazosdirecto.com?subject=${subject}&body=${message}`
+    mail.href = `mailto:${process.env.BALAZOS_EMAIL}?subject=${subject}&body=${message}`
     mail.click()
   }
 
@@ -60,10 +61,14 @@ const ContactForm = props => {
             <div className={"row"}>
               <form
                 id="contact_form"
+                name="contact"
                 className={"dark"}
-                method="POST"
-                action="https://formspree.io/hola@balazosdirecto.com"
-                onSubmit={sendEmail}
+                // method="POST"
+                // action={`https://formspree.io/${process.env.BALAZOS_EMAIL}`}
+                // onSubmit={sendEmail}
+                method="POST" 
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
               >
                 <div className={"large-12 columns"}>
                   {state.showThanks ? (
@@ -106,6 +111,7 @@ const ContactForm = props => {
                     type="hidden"
                     value="{{ site.email }}"
                   />
+                  <input type="hidden" name="form-name" value="contact" />
                   <div className={"spacing"}></div>
                   <input className={"button white"} type="submit" />
                 </div>
@@ -129,7 +135,7 @@ const ContactForm = props => {
                 <h4>Phone:</h4>
                 <p>+34 658 94 66 45</p>
                 <h4>Email:</h4>
-                <p>hola@balazosdirecto.com</p>
+                <p>{process.env.BALAZOS_EMAIL}</p>
               </div>
             </div>
           </div>
