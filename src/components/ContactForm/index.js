@@ -45,7 +45,7 @@ const ContactForm = props => {
 
   const sendEmailWithMailTo = (subject, message) => {
     var mail = document.createElement("a")
-    mail.href = `mailto:${process.env.BALAZOS_EMAIL}?subject=${subject}&body=${message}`
+    mail.href = `mailto:hola@balazosdirecto.com?subject=${subject}&body=${message}`
     mail.click()
   }
 
@@ -135,7 +135,7 @@ const ContactForm = props => {
                 <h4>Phone:</h4>
                 <p>+34 658 94 66 45</p>
                 <h4>Email:</h4>
-                <p>{process.env.BALAZOS_EMAIL}</p>
+                <p>hola@balazosdirecto.com</p>
               </div>
             </div>
           </div>
