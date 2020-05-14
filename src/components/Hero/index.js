@@ -1,19 +1,12 @@
 import React from "react"
 import SmallTitle from "../SmallTitle"
 import Description from "../Description"
+import Video from "./Video"
 
 export default () => (
   <div className={"full no-padding parallax home-video-wrapper"}>
     <div className={"fullscreen"}>
-      <video autoPlay id="fullscreen-video" loop muted>
-        <source src={"/hero.mp4"} type="video/mp4" />
-        <track
-          default
-          kind="captions"
-          srcLang="en"
-          src="/media/examples/friday.vtt"
-        />
-      </video>
+      <Video />
       <div className={"overlay"}></div>
       <div className={"layer"}>
         <SmallTitle text="Un punto de contacto para toda tu música" />
