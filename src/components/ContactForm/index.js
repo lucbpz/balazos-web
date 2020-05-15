@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import axios from "axios"
 import SectionTitle from "../SectionTitle"
 
 const ContactForm = props => {
@@ -20,35 +19,6 @@ const ContactForm = props => {
     })
   }
 
-  const sendEmail = async e => {
-    e.preventDefault()
-    try {
-      // await axios.post("https://formspree.io/xyyjyanq", {
-      //   name: state.name,
-      //   email: state.email,
-      //   subject: state.subject,
-      //   message: state.message,
-      // })
-      
-      setState({
-        showThanks: true,
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      })
-    } catch (err) {
-      console.log(err)
-      sendEmailWithMailTo(state.subject, state.message)
-    }
-  }
-
-  const sendEmailWithMailTo = (subject, message) => {
-    var mail = document.createElement("a")
-    mail.href = `mailto:hola@balazosdirecto.com?subject=${subject}&body=${message}`
-    mail.click()
-  }
-
   return (
     <div style={{ paddingTop: "0px" }} className={"full dark"}>
       <div className={"row"}>
@@ -63,12 +33,10 @@ const ContactForm = props => {
                 id="contact_form"
                 name="contact"
                 className={"dark"}
-                // method="POST"
-                // action={`https://formspree.io/${process.env.BALAZOS_EMAIL}`}
-                // onSubmit={sendEmail}
-                method="POST" 
+                method="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
+                action='/thankyou'
               >
                 <div className={"large-12 columns"}>
                   {state.showThanks ? (
@@ -94,6 +62,13 @@ const ContactForm = props => {
                     onChange={handleChange}
                   />
                   <input
+                    className={"required phone"}
+                    name="phone"
+                    placeholder="PHONE"
+                    type="text"
+                    onChange={handleChange}
+                  />
+                  <input
                     className={"required"}
                     name="subject"
                     placeholder="ASUNTO"
@@ -106,11 +81,11 @@ const ContactForm = props => {
                     placeholder="MENSAJE"
                     onChange={handleChange}
                   ></textarea>
-                  <input
+                  {/* <input
                     name="recipient"
                     type="hidden"
                     value="{{ site.email }}"
-                  />
+                  /> */}
                   <input type="hidden" name="form-name" value="contact" />
                   <div className={"spacing"}></div>
                   <input className={"button white"} type="submit" />

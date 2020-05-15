@@ -1,0 +1,12 @@
+{
+  "baseUrl": "http://localhost:8000",
+  "defaultCommandTimeout": 30000,
+  "requestTimeout": 30000,
+  "viewportHeight": 800,
+  "viewportWidth": 800,
+  "env": {
+    "MAILSLURP_API_KEY": "fd88bff8f2617657bb11b168000e5002a102dc7eb99194726c5176b93afee7e0"
+  },
+  "chromeWebSecurity": false,
+  "projectId": "jft9w8"
+}
