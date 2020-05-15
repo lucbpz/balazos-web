@@ -15,7 +15,8 @@
     "deploy:dev": "surge --domain balazosdirecto-staging.surge.sh public/",
     "deploy:prod": "surge --domain balazosdirecto.surge.sh public/",
     "start:ci": "npm start & wait-on http://localhost:8000",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run",
+    "test:e2e": "npm run start:ci && npm run cy:run"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
