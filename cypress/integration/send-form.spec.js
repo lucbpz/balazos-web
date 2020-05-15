@@ -13,7 +13,8 @@ describe('when a user fills out the form', async () => {
         cy.get('form').should('have.attr', 'method', 'POST')
 
         cy.get('input[type="submit"]').click()
-
+        
+        cy.wait(2000)
         cy.url().should('include', '/thankyou')
         cy.get('h1').contains('Gracias por contactar con nosotros!').should('be.visible')
 
