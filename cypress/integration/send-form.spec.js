@@ -5,6 +5,7 @@ describe('when a user fills out the form', async () => {
         // cy.createInbox().then(({ id, emailAddress }) => {
         cy.get('input[name="name"]').type('John Doe')
         cy.get('input[name="email"]').type('john.doe@gmail.com')
+        cy.get('input[name="phone"]').type('666666666')
         cy.get('input[name="subject"]').type('Test')
         cy.get('textarea[name="message"]').type('Una nueva versión de la web de balazos se está desplegando!')
         cy.get('form').should('have.attr', 'name', 'contact')
