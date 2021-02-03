@@ -13,6 +13,8 @@ const InvertedSectionTitle = props => {
           <p>
             <a
               className={"button small boxed"}
+              target="_blank"
+              rel="noopener noreferrer"
               href="https://www.youtube.com/channel/UC3_CxMsHZCWuVUnIEixaIhg"
             >
               Visita nuestro canal de YouTube

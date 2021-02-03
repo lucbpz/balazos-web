@@ -40,7 +40,11 @@ export default () => (
           hacerte pasar un buen rato. Con nosotros podrás disfrutar en todos los
           momentos: música de ambiente, acústicos, y una banda completa de rock!"
         >
-          <a href='{{ "index.html" | append:nav_obj.path | relative_url }}'>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.youtube.com/channel/UC3_CxMsHZCWuVUnIEixaIhg"
+          >
             Mira nuestro trabajo
           </a>
         </Description>
