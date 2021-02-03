@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Hero from "../components/Hero"
 import Services from "../components/Services"
 // import Navbar from "../components/Navbar"
-import InstagramContainer from "../components/InstagramContainer"
+import Instagram from "../components/Instagram"
 import SectionTitle from "../components/SectionTitle"
 import InvertedSectionTitle from "../components/InvertedSectionTitle"
 import Members from "../components/Members"
@@ -12,17 +12,22 @@ import ContactForm from "../components/ContactForm"
 import Social from "../components/Social"
 import Footer from "../components/Footer"
 import SEO from "../components/SEO"
+import { Box } from "grommet"
 
-const Home = ({
-  data: { allInstaNode, rawMembers, rawServices, rawReferences },
-}) => (
+const Home = ({ data: { rawMembers, rawServices, rawReferences } }) => (
   <div className={"f-topbar-fixed"}>
     {/* <Navbar /> */}
     <SEO />
     <div id="main" className={"top-shift"}>
       <Hero />
       <Services id="services" services={mapNodes(rawServices)} />
-      <InstagramContainer nodes={allInstaNode} />
+      <Box>
+        <SectionTitle
+          title="Qué hemos estado haciendo últimamente."
+          smallTitle="Echa un vistazo"
+        />
+        <Instagram /> 
+      </Box>
       <SectionTitle
         title="Nos gusta lo que hacemos"
         smallTitle="EXPERIENCIA CREATIVA Y DIVERTIDA"
@@ -48,24 +53,6 @@ const mapNodes = data =>
 
 export const pageQuery = graphql`
   query GetMembersAndScrapingQuery {
-    allInstaNode: allInstaNode(filter: { username: { eq: "balazosdirecto" } }) {
-      edges {
-        node {
-          id
-          username
-          likes
-          caption
-          comments
-          localFile {
-            childImageSharp {
-              fluid(quality: 70, maxWidth: 600, maxHeight: 600) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-        }
-      }
-    }
     rawMembers: allFile(filter: { sourceInstanceName: { eq: "members" } }) {
       edges {
         node {
