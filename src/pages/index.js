@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Hero from "../components/Hero"
+import SecondHero from "../components/SecondHero"
 import Services from "../components/Services"
 // import Navbar from "../components/Navbar"
 import Instagram from "../components/Instagram"
@@ -12,6 +13,7 @@ import ContactForm from "../components/ContactForm"
 import Social from "../components/Social"
 import Footer from "../components/Footer"
 import SEO from "../components/SEO"
+import Video from "../components/Video"
 import { Box } from "grommet"
 
 const Home = ({ data: { rawMembers, rawServices, rawReferences } }) => (
@@ -21,12 +23,17 @@ const Home = ({ data: { rawMembers, rawServices, rawReferences } }) => (
     <div id="main" className={"top-shift"}>
       <Hero />
       <Services id="services" services={mapNodes(rawServices)} />
+      <SecondHero />
       <Box>
         <SectionTitle
           title="Qué hemos estado haciendo últimamente."
           smallTitle="Echa un vistazo"
         />
-        <Instagram /> 
+        {/* <Instagram />  */}
+        <Video 
+          videoSrcURL="https://www.youtube.com/embed/XsUvla35UY4"
+          videoTitle="Grupo Balazos"
+        />
       </Box>
       <SectionTitle
         title="Nos gusta lo que hacemos"
