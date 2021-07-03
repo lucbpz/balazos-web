@@ -1,23 +1,29 @@
 import React, { useState } from "react"
+import { useForm, ValidationError } from '@formspree/react';
 import SectionTitle from "../SectionTitle"
 
 const ContactForm = props => {
-  const [state, setState] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-    showThanks: false,
-  })
+  // const [state, setState] = useState({
+  //   name: "",
+  //   email: "",
+  //   subject: "",
+  //   message: "",
+  //   showThanks: false,
+  // })
+  const [state, handleSubmit] = useForm("xrgrlonj");
 
-  const handleChange = evt => {
-    const value = evt.target.value
-    setState({
-      ...state,
-      showThanks: false,
-      [evt.target.name]: value,
-    })
-  }
+  if (state.succeeded) {
+    return <p>Gracias por contactar con nosotros! En breve te responderemos!</p>;
+}
+
+  // const handleChange = evt => {
+  //   const value = evt.target.value
+  //   setState({
+  //     ...state,
+  //     showThanks: false,
+  //     [evt.target.name]: value,
+  //   })
+  // }
 
   return (
     <div style={{ paddingTop: "0px" }} className={"full dark"}>
@@ -33,53 +39,50 @@ const ContactForm = props => {
                 id="contact_form"
                 name="contact"
                 className={"dark"}
-                method="POST"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
-                action='/thankyou'
+                onSubmit={handleSubmit}
               >
-                <div className={"large-12 columns"}>
+                {/* <div className={"large-12 columns"}>
                   {state.showThanks ? (
                     <p id="thanks">
                       Gracias por contactar con nosotros. Te contestaremos en
                       breve!
                     </p>
                   ) : null}
-                </div>
+                </div> */}
                 <div className={"medium-12 columns"}>
                   <input
                     className={"required"}
                     name="name"
                     placeholder="NOMBRE"
                     type="text"
-                    onChange={handleChange}
+                    // onChange={handleChange}
                   />
                   <input
                     className={"required email"}
                     name="email"
                     placeholder="EMAIL"
                     type="text"
-                    onChange={handleChange}
+                    // onChange={handleChange}
                   />
                   <input
                     className={"required phone"}
                     name="phone"
                     placeholder="PHONE"
                     type="text"
-                    onChange={handleChange}
+                    // onChange={handleChange}
                   />
                   <input
                     className={"required"}
                     name="subject"
                     placeholder="ASUNTO"
                     type="text"
-                    onChange={handleChange}
+                    // onChange={handleChange}
                   />
                   <textarea
                     className={"required"}
                     name="message"
                     placeholder="MENSAJE"
-                    onChange={handleChange}
+                    // onChange={handleChange}
                   ></textarea>
                   {/* <input
                     name="recipient"
@@ -88,7 +91,7 @@ const ContactForm = props => {
                   /> */}
                   <input type="hidden" name="form-name" value="contact" />
                   <div className={"spacing"}></div>
-                  <input className={"button white"} type="submit" />
+                  <button className={"button white"} type="submit" disabled={state.submitting}>Contactar</button>
                 </div>
               </form>
             </div>
