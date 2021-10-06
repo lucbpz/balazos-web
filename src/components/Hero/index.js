@@ -5,7 +5,7 @@ import Description from "../Description"
 export default () => (
   <div className={"full no-padding parallax home-video-wrapper"}>
     <div className={"fullscreen"}>
-      <video autoPlay id="fullscreen-video" loop muted>
+      <video autoPlay id="fullscreen-video" loop muted poster="/heroPoster.PNG">
         <source src={"/hero.mp4"} type="video/mp4" />
         <track
           default
