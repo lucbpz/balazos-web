@@ -1,0 +1,14 @@
+[
+    {
+        "order": 1,
+        "author": "Francisco José Oliva",
+        "avatar": "/static/img/avatar-man-1.png",
+        "description": "Si estás pensando en pasar un rato muy divertido y con buena música, y bien interpretada! Este es el grupo idóneo! He podido disfrutar de ellos en ferias y alguna que otra boda! Los mejores! Y formalidad 10! Espero que llegen muy lejos!"
+    },
+    {
+        "order": 2,
+        "author": "Julián Benítez",
+        "avatar": "/static/img/avatar-man-2.png",
+        "description": "Conté desde primera hora con ellos para mi caseta. Grupo muy formal y de los más divertidos que he visto. Pedazo de rato que te hacen pasar!! El año que viene más y mejor."
+    }
+]
