@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { google, outlook, office365, yahoo, ics } from "calendar-link"
+import { google, ics } from "calendar-link"
 import Link from "next/link"
 import { useRouter } from "next/router"
 
@@ -37,6 +37,14 @@ const Bolos = ({}) => {
           start: eventObj.fecha,
           allDay: true,
         }
+        // Set event as an object
+        const iosEv = {
+          title: "My Title",
+          description: "My Description",
+          startTime: "2018-10-07T10:30:00+10:00",
+          location: "10 Carlotta St, Artarmon NSW 2064, Australia",
+        }
+
         return (
           <div
             style={{
@@ -46,11 +54,11 @@ const Bolos = ({}) => {
               alignItems: "center",
             }}
           >
-            <h3 style={{padding: 0, margin: 0}}>{eventObj.fecha}</h3>
-            <h4 style={{padding: 0, margin: 0}}>{eventObj.title}</h4>
-            <p style={{padding: 0, margin: 0}}>{eventObj.hora}</p>
-            <a href={google(ev)} >Add to calendar (Google)</a>
-            {/* <a href={ics(ev)}>Add to calendar (iOS)</a> */}
+            <h3 style={{ padding: 0, margin: 0 }}>{eventObj.fecha}</h3>
+            <h4 style={{ padding: 0, margin: 0 }}>{eventObj.title}</h4>
+            <p style={{ padding: 0, margin: 0 }}>{eventObj.hora}</p>
+            <a href={google(ev)}>Add to calendar (Google)</a>
+            <a href={ics(ev)}>Add to calendar (iOS)</a>
           </div>
         )
       })}
