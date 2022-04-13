@@ -1,0 +1,64 @@
+[
+  {
+    "order": 1,
+    "name": "Fran Escalante",
+    "avatar": "/img/fran.jpg",
+    "position": "Vocalista",
+    "description": "Un día salió de casa, se dejó la vergüenza en la mesita de noche, y ya nunca volvió a saber de ella. Además de cantar con nosotros, se dedica a componer coplas de Carnaval y a llevar su chirigota por los mejores concursos de Andalucía.",
+    "socials": {
+      "facebook": "https://www.facebook.com/fran.escaso",
+      "instagram": "https://www.instagram.com/franbalazos"
+    }
+  },
+  {
+    "order": 2,
+    "name": "Luis Ortega",
+    "avatar": "/img/luis.jpg",
+    "position": "Guitarra solista",
+    "description": "Ni Clint Eastwood le ganaría en un duelo de dedos más rápidos. Su Gibson viaja con él allá donde va, por los grupos más insólitos de la comarca. Nuestro último fichaje de la temporada de invierno, que esperemos que nos haga ganar copas (o al menos, que invite)",
+    "socials": {
+      "instagram": "https://www.instagram.com/luisortegama"
+    }
+  },
+  {
+    "order": 3,
+    "name": "José Manuel Acacio",
+    "avatar": "/img/acacio.jpg",
+    "position": "Guitarra rítmica",
+    "description": "El Doctor del grupo. Aunque la medicina en la que confía no se basa en los químicos, quita cualquier enfermedad a base de acordes. Otro gran compositor de coplas de carnaval, un clásico entre nosotros, y que lleva casi toda la vida atado a una guitarra.",
+    "socials": {
+      "instagram": "https://www.instagram.com/josemanuelgarciaacacio"
+    }
+  },
+  {
+    "order": 4,
+    "name": "Lucas Bernalte",
+    "avatar": "/img/lucas.jpg",
+    "position": "Bajista",
+    "description": "Nuestro miembro más internacional, se ha recorrido medio mundo en busca de inspiración para componer, pero parece que todavía no la ha encontrado. Eso sí, dale un instrumento nuevo y aprenderá a tocarlo en menos de 1 hora! El Solari del grupo!",
+    "socials": {
+      "instagram": "https://www.instagram.com/_thislucas",
+      "twitter": "https://www.twitter.com/lucasbernalte"
+    }
+  },
+  {
+    "order": 5,
+    "name": "Juan Ortega",
+    "avatar": "/img/juan.jpg",
+    "position": "Teclista",
+    "description": "Empezó a tocar la batería dando baquetazos a un sofá, de ahí ha pasado por el bajo eléctrico, la guitarra, director musical de agrupaciones de carnaval, y entre sus últimos descubrimientos, el piano. Dedicación máxima y motivación describen a este crack!",
+    "socials": {
+      "instagram": "https://www.instagram.com/juanortegajimenez"
+    }
+  },
+  {
+    "order": 6,
+    "name": "Carlos Romero",
+    "avatar": "/img/carlos.png",
+    "position": "Baterista",
+    "description": "Ha iluminado el grupo con su presencia (y con los juegos de luces que ha comprado). El agujero del parche del bombo es demasiado pequeño para su mano. Mucho groove y pocas nueces.",
+    "socials": {
+      "instagram": "https://www.instagram.com/carlosrmrprt"
+    }
+  }
+]

@@ -1,0 +1,10 @@
+.references-text-container {
+  min-height: 530px;
+  background-color: rgb(230, 226, 217);
+}
+
+@media only screen and (max-width: 767px) {
+  .references-text-container {
+    min-height: 748px;
+  }
+}
