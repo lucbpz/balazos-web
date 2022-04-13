@@ -26,6 +26,12 @@ export default async (req, res) => {
             }
           },
           {
+            property: "Fecha",
+            date: {
+              after: new Date(),
+            },
+          },
+          {
               property: 'Quiénes van',
               multi_select: {
                 contains: capitalize(member)
@@ -40,7 +46,6 @@ export default async (req, res) => {
         }
       ]
     })
-    console.table(results.map(result => (JSON.stringify(result.properties))));
     
     const allEvents = results.map(page => {
       return {

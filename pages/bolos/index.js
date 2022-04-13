@@ -54,7 +54,7 @@ const Bolos = ({}) => {
             <h4 style={{padding: 0, margin: 0}}>{eventObj.title}</h4>
             <p style={{padding: 0, margin: 0}}>{eventObj.hora}</p>
             <a href={google(ev)} >Add to calendar (Google)</a>
-            {/* <a href={ics(ev)}>Add to calendar (iOS)</a> */}
+            <a href={ics(ev)}>Add to calendar (iOS)</a>
           </div>
         )
       })}

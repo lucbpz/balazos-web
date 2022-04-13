@@ -11,33 +11,38 @@ export default async (req, res) => {
       filter: {
         and: [
           {
-            property: 'Archivada',
+            property: "Archivada",
             checkbox: {
-              equals: false
-            }
-          }
-        ]
+              equals: false,
+            },
+          },
+          {
+            property: "Fecha",
+            date: {
+              after: new Date(),
+            },
+          },
+        ],
       },
       sorts: [
         {
-          property: 'Fecha',
-          direction: 'ascending'
-        }
-      ]
+          property: "Fecha",
+          direction: "ascending",
+        },
+      ],
     })
-    
+
     const allEvents = results.map(page => {
       return {
         pageId: page.id,
         title: page.properties.Name.title[0].plain_text,
         hora: page.properties.Hora.select?.name,
-        quienesVan: page.properties['Quiénes van'].multi_select,
+        quienesVan: page.properties["Quiénes van"].multi_select,
         totalBruto: page.properties.number,
         extras: page.properties.Extras.multi_select,
         fecha: page.properties.Fecha.date.start,
         plain_text: page.plain_textm,
-        donde: page.properties['Dónde'].select?.name
-
+        donde: page.properties["Dónde"].select?.name,
       }
     })
     res.status(200).json(allEvents)
