@@ -12,7 +12,7 @@ const ThankYou = () => {
                     width="63"
                     height="24"
                     alt="Logo de balazos"
-                    src={"/balazos-logo.png"}
+                    src={"/static/balazos-logo.png"}
                 />
             </Header>
             <Main pad="large">

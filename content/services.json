@@ -2,25 +2,25 @@
     {
         "order": 1,
         "title": "Grupo de pop/rock",
-        "icon": "/img/icon-karaoke.png",
+        "icon": "/static/img/icon-karaoke.png",
         "description": "Una composición de vocalista, 2 guitarras eléctricas, teclado, bajo y batería, con un toque rockero y canalla, que te hará participar y bailar con los temas más sonados de los 80 (aunque sean de otra época, nosotros siempre decimos que son de los 80)."
     },
     {
         "order": 2,
         "title": "Acústicos",
-        "icon": "/img/icon-microphone.png",
+        "icon": "/static/img/icon-microphone.png",
         "description": "Un concierto en acústico para amenizar una ceremonia, cocktail o recepción de una boda. ¿Te gusta Ed Sheeran? Tenemos un pedal de loop para hacer canciones como las hace él. ¿Una sola persona es capaz de sonar como una banda? Sí. Y nos gusta."
     },
     {
         "order": 3,
         "title": "DJ",
-        "icon": "/img/icon-dj.png",
+        "icon": "/static/img/icon-dj.png",
         "description": "Tenemos un fabuloso DJ y animador que pondrá esa música que tanto recuerdas cuando salías en tus años mozos, con aquellos primeros ligoteos, y te hará bailar tanto que no podrás aguantar el ritmo! Agujetas aseguradas al día siguiente. En forma con Balazos!"
     },
     {
         "order": 4,
         "title": "Otros servicios",
-        "icon": "/img/icon-dance.png",
+        "icon": "/static/img/icon-dance.png",
         "description": "¿Hace falta escenario en una hacienda? ¿Hace falta material para el bolo? Podemos encargarnos de ciertos detalles que falten en el evento relacionados con la música, para que no te tengas que preocupar de nada. Incluso puede que haya alguna sorpresa :)."
     }
 ]

@@ -16,7 +16,7 @@ const SecondHero = () => {
                     <h2>Confía en los mejores</h2>
                 </div>
             </div>
-            <img style={{ maxHeight: "422px", filter: 'drop-shadow(5px 5px 5px #222)' }} alt="logo bodas.net" src="/img/bodasnet.png" />
+            <img style={{ maxHeight: "422px", filter: 'drop-shadow(5px 5px 5px #222)' }} alt="logo bodas.net" src="/static/img/bodasnet.png" />
 
         </div>
     )

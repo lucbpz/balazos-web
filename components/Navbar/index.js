@@ -19,7 +19,7 @@ export default () => (
               width="126"
               height="48"
               alt=""
-              src={"/balazos-logo.png"}
+              src={"/static/balazos-logo.png"}
             />
           </h1>
         </li>

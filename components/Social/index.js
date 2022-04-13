@@ -14,7 +14,7 @@ const Social = props => {
   return (
     <StyledBackgroundSection
       className={`full parallax ${styles['social-networks']}`}
-      src={"/img/bg/balazos-fabrica-2.jpg"}
+      src={"/static/img/bg/balazos-fabrica-2.jpg"}
     >
       <div className={"two spacing"}></div>
       <div className={"row"}>

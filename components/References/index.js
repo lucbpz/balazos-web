@@ -7,7 +7,7 @@ import StyledBackgroundSection from "../BackgroundSection"
 const References = props => {
   return (
     <StyledBackgroundSection
-      src={"/img/bg/balazos-bodeguita.jpg"}
+      src={"/static/img/bg/balazos-bodeguita.jpg"}
       className={""}
     >
       <div

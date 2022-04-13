@@ -1,7 +1,7 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="http://www.balazosdirecto.com">
-    <img alt="Balazos" src="http://balazosdirecto.surge.sh/balazos-logo.png" width="60" />
+    <img alt="Balazos" src="http://balazosdirecto.com/balazos-logo.png" width="60" />
   </a>
 </p>
 <h1 align="center">
@@ -10,10 +10,6 @@
 
 <p align="center">
   <a href="http://www.balazosdirecto.com">balazosdirecto.com</a>
-</p>
-
-<p align="center">
-  <a href="https://travis-ci.org"><img src="https://travis-ci.org/lucbpz/balazos-web.svg?branch=master" /></a>
 </p>
 
 - [🎉 Features](#-features)

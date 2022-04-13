@@ -6,7 +6,7 @@ export default () => (
   <div className={"full no-padding parallax home-video-wrapper"}>
     <div className={"fullscreen"}>
       <video autoPlay id="fullscreen-video" loop muted>
-        <source src={"/hero.mp4"} type="video/mp4" />
+        <source src={"/static/hero.mp4"} type="video/mp4" />
         <track
           default
           kind="captions"
