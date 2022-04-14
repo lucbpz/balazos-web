@@ -18,7 +18,7 @@ const Bolos = ({}) => {
         display: "flex",
         flexDirection: "column",
         gap: "1rem",
-        padding: "1rem 5rem",
+        padding: "1rem 2rem",
       }}
     >
       <h1>Próximos Bolos</h1>
@@ -33,11 +33,11 @@ const Bolos = ({}) => {
         <Link href="/bolos/yeyo">Yeyo</Link>
         <Link href="/bolos/Luis">Luis</Link>
       </div>
-      <ul style={{ display: "flex", flexWrap: "wrap", gap: "2rem" }}>
+      <div style={{ display: "flex", justifyContent: 'center', flexWrap: "wrap", gap: "2rem" }}>
         {data.map(eventObj => (
           <BolosCard ev={eventObj} />
         ))}
-      </ul>
+      </div>
     </div>
   )
 }
