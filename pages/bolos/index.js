@@ -30,8 +30,9 @@ const Bolos = ({}) => {
         <Link href="/bolos/juan">Juan</Link>
         <Link href="/bolos/carlos">Carlos</Link>
         <Link href="/bolos/fran">Fran</Link>
-        <Link href="/bolos/yeyo">Yeyo</Link>
         <Link href="/bolos/Luis">Luis</Link>
+        <Link href="/bolos/Pablo">Pablo</Link>
+        <Link href="/bolos/yeyo">Yeyo</Link>
       </div>
       <div style={{ display: "flex", justifyContent: 'center', flexWrap: "wrap", gap: "2rem" }}>
         {data.map(eventObj => (

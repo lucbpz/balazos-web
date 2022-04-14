@@ -29,7 +29,7 @@ const BolosCard = ({ ev }) => {
       <h3 style={{ padding: 0, margin: 0 }}>{ev.title}</h3>
       <div style={{marginTop: '0.5rem'}}>
         <div style={{display: "flex", flexDirection: 'row', gap: '0.5rem', alignItems: 'center'}}><Location /><span>{ev.donde}</span></div>
-        <div style={{display: "flex", flexDirection: 'row', gap: '0.5rem', alignItems: 'center'}}><Clock /><p style={{ padding: 0, margin: 0 }}>{ev.hora}</p></div>
+        <div style={{display: "flex", marginTop: '0.3rem', flexDirection: 'row', gap: '0.5rem', alignItems: 'center'}}><Clock /><p style={{ padding: 0, margin: 0 }}>{ev.hora}</p></div>
       </div>
       <div style={{display:'flex', marginTop: '1rem', gap: '0.5rem', alignItems: 'center', justifyContent: 'center'}}>
         <span>Add To Calendar</span>
